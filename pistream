@@ -11,10 +11,12 @@ PAGE="""\
 <html>
 <head>
 <title>UbuntuCore picamera MJPEG streaming demo</title>
+<title>Ubuntu-ARM64 picamera MJPEG streaming demo</title>
 </head>
 <body>
 <h1>UbuntuCore PiCamera MJPEG Streaming Demo</h1>
-<img src="stream.mjpg" width="1280" height="720" />
+<h1>Ubuntu-ARM64 PiCamera MJPEG Streaming Demo</h1>
+<img src="stream.mjpg" width="4056" height="3040" />
 </body>
 </html>
 """
@@ -78,8 +80,9 @@ class StreamingHandler(server.BaseHTTPRequestHandler):
 class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     allow_reuse_address = True
     daemon_threads = True
-
-with picamera.PiCamera(resolution='1280x720', framerate=24) as camera:
+    
+# 4056 x 3040  '1280x720'
+with picamera.PiCamera(resolution='4056x3040', framerate=24) as camera:
     output = StreamingOutput()
     camera.start_recording(output, format='mjpeg')
     try:
