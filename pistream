@@ -10,11 +10,9 @@ from http import server
 PAGE="""\
 <html>
 <head>
-<title>UbuntuCore picamera MJPEG streaming demo</title>
 <title>Ubuntu-ARM64 picamera MJPEG streaming demo</title>
 </head>
 <body>
-<h1>UbuntuCore PiCamera MJPEG Streaming Demo</h1>
 <h1>Ubuntu-ARM64 PiCamera MJPEG Streaming Demo</h1>
 <img src="stream.mjpg" width="4056" height="3040" />
 </body>
