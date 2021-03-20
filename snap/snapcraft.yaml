@@ -38,6 +38,7 @@ parts:
     plugin: nil
     override-pull: |
       sudo add-apt-repository ppa:ubuntu-raspi2/ppa
+      sudo add-apt-repository ppa:ubuntu-pi-flavour-makers/ppa
       sudo apt-get update
     build-packages:
       - software-properties-common
